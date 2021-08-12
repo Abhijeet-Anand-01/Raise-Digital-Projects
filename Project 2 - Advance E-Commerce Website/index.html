@@ -24,14 +24,14 @@
 
     <nav class="nav nav_top">
         <div class="logo">
-            <a href="#"><img src="assets/images/1stop.png" alt="1stop" width="150"></a>
+            <a href="index.html"><img src="assets/images/1stop.png" alt="1stop" width="150"></a>
         </div>
         <div class="nav_side">
-            <a href="">About Us</a>
-            <a href="">Services</a>
-            <a href="">Blogs</a>
-            <a href="">Contact</a>
-            <a href="">Login/Register</a>
+            <a href="html/about.html">About Us</a>
+            <a href="html/service.html">Services</a>
+            <a href="html/blog.html">Blogs</a>
+            <a href="html/contact.html">Contact</a>
+            <a href="html/login.html">Login/Register</a>
         </div>
     </nav>
 
@@ -171,20 +171,57 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-
         </div>
     </div>
+
+    <hr>
+
+    <div class="team">
+        <h2>OUR TEAM</h2>
+        <div class="team_container">
+            <div class="team_video">
+                <video controls>
+                    <source src="assets/videos/Computer Keyboard - 3174.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="team_content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quaerat dolor maxime quas dolorum
+                    distinctio, excepturi sunt libero. Numquam ab delectus dicta rerum quae modi molestiae sit vel
+                    voluptates officiis.!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quaerat dolor maxime quas dolorum
+                    distinctio, excepturi sunt libero. Numquam ab delectus dicta rerum quae modi molestiae sit vel
+                    voluptates officiis. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae ipsam officia
+                    voluptatem, iusto odit eos impedit laborum quod, mollitia ab vitae repudiandae ipsum in velit. Nemo
+                    distinctio blanditiis ex hic.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="feed">
+        <h2>Write a review</h2>
+        <div class="feed_form">
+            <form name="submit-googlesheet">
+                <input type="text" name="Name" placeholder="Name"><br>
+                <input type="email" name="Email" placeholder="Email ID"><br>
+                <input type="number" name="Number" placeholder="Contact Number"><br>
+                <textarea name="" cols="7" rows="5" name="Review" placeholder="Write your review"></textarea><br>
+                <button type="submit"
+                    onclick="alert('Thanks for contacting us! We will get in touch with you soon!');">Submit</button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div class="footer_logo">
-            <a href="#"><img src="assets/images/1stop.png" alt="1stop" width="150"></a>
+            <a href="index.html"><img src="assets/images/1stop.png" alt="1stop" width="150"></a>
         </div>
         <div class="pages">
             <h3>Pages</h3>
-            <a href="">About Us</a>
-            <a href="">Services</a>
-            <a href="">Blogs</a>
-            <a href="">Contact</a>
-            <a href="">Login/Register</a>
+            <a href="html/about.html">About Us</a>
+            <a href="html/service.html">Services</a>
+            <a href="html/blog.html">Blogs</a>
+            <a href="html/contact.html">Contact</a>
+            <a href="html/login.html">Login/Register</a>
         </div>
         <div class="doc">
             <h3>Documents</h3>
@@ -220,6 +257,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwm5Fb8vV7rQI58HkgKNpDhbEPvVtALGDB8suTDmyfZda4Z-gjEF8_dif21bG53LrAa/exec'
+        const form = document.forms['submit-googlesheet']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
 
 </body>
 

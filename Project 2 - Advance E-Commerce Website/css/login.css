@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    transition: 0.2s ease-in-out;
+}
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #ebecf0;
+}
+
+.container {
+    margin-bottom: 100px;
+}
+
+.formpage {
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    margin: auto;
+    margin-top: 10%;
+    width: 20%;
+    height: 50vh;
+}
+
+.formpage > header {
+    font-family: sans-serif;
+    color: #868996;
+    text-align: center;
+    padding: 10px;
+}
+
+.input-field,
+.logbutton {
+    position: relative;
+    text-align: center;
+    padding: 12px;
+}
+
+.input-field > input {
+    width: 80%;
+    height: 45px;
+    border-radius: 50px;
+    padding-left: 35px;
+    font-size: 100%;
+}
+
+.logbutton > button {
+    color: rgb(162 39 39);
+    font-size: 17px;
+    font-weight: 550;
+    width: 85%;
+    height: 45px;
+    border-radius: 50px;
+    margin-bottom: 2%;
+}
+
+.actions {
+    text-align: center;
+}
+
+.actions > button {
+    width: 11%;
+    height: 38px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.input-field i {
+    color: #62687e;
+    position: absolute;
+    left: 60px;
+    top: 24px;
+}
+
+.footer > input {
+    width: 60%;
+    height: 45px;
+    border-radius: 50px;
+    padding-left: 35px;
+    font-size: 100%;
+}
+
+.footer {
+    position: relative;
+    margin-top: 7%;
+    text-align: center;
+}
+
+.footer > button {
+    margin-left: 1%;
+    width: 11%;
+    height: 38px;
+    border-radius: 5px;
+}
+
+.footer > i {
+    color: #62687e;
+    position: absolute;
+    left: 64px;
+    top: 12px;
+}
+
+/* TAG BASED CSS */
+button {
+    border: none;
+    color: #62687e;
+    background-color: #ebecf0;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+
+button:hover {
+    background-color: #ebecf0;
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+button:active {
+    background-color: #ebecf0;
+    box-shadow: inset 1px 1px 1px #babecc, inset -2px -2px 1px #fff;
+}
+button:focus {
+    outline: none;
+}
+
+input {
+    border: none;
+    background-color: #ebecf0;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+}
+input:focus {
+    background-color: #ebecf0;
+    box-shadow: inset 1px 1px 1px #babecc, inset -2px -2px 1px #fff;
+    outline: none;
+}
+
+@media only screen and (max-width: 1300px) {
+    .formpage {
+        width: 35%;
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .formpage {
+        width: 25%;
+        height: 60vh;
+    }
+}
